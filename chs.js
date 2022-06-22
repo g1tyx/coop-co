@@ -157,7 +157,7 @@ var cnItems = {
     "It takes 3000 grains to produce an egg": "生产一个鸡蛋需要3000粒谷物",
     "Machine Learning Incubators": "机器学习孵化器",
     "Matter Reconfiguration": "物质重构",
-    "Medical Egg": "医用鸡蛋",
+    "Medical Egg": "医疗蛋",
     "Multiversal Layering": "多重分层",
     "Nebula Egg": "星云蛋",
     "Neural Linking": "神经链接",
