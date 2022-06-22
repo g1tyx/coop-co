@@ -215,7 +215,7 @@ var cnItems = {
     "Chicken nugget farmers have stolen some of your chickens!": "鸡块农民偷了你的一些鸡！",
     "Click here for free prophecy egg": "点击这里免费预言彩蛋",
     "Come back tomorrow for your daily egg news.": "明天回来看看你的每日鸡蛋新闻。",
-    "Communism Doesn't Work": "共产主义行不通",
+    "Communism Doesn't Work": "资本主义行不通",
     "Eggcelent gameplay.": "蛋清 游戏玩法。",
     "Florida man ends up exploring the entire local group": "佛罗里达男子最终探索了整个当地团体",
     "Florida Man has broken the fourth wall and is breaking the further walls, I repeat, Florida Man has broken the fourth wall and is working on the others!": "佛罗里达人已经打破了第四堵墙，并且正在打破更多的墙，我再说一遍，佛罗里达人已经打破了第四堵墙，并且正在研究其他的墙！",
