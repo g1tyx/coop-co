@@ -390,7 +390,7 @@ var cnItems = {
     "Wealth": "财富",
     "Enter The Path": "进入路径",
     "Supply Chain Issues have caused resources Supermaterial Eggs are needed to offset the shortage.": "供应链问题导致资源需要超材料鸡蛋来弥补短缺。",
-    "": "",
+    "Dieting is back in fashion people need more Superfood Eggs.": "节食回归时尚，人们需要更多的超级食品鸡蛋。",
     "": "",
     "": "",
     "": "",
@@ -669,8 +669,8 @@ var cnPostfix = {
     " Lay Rate Boost": " 层速率提升",
     " Planet Egg Value Boost": " 行星蛋价值提升",
     " Soul Egg Gain Boost": " 灵魂蛋获得提升",
-    "": "",
-    "": "",
+    " | Supreme Diets - [ACTIVE]": " | 至尊饮食 - [已激活]",
+    " | Supreme Diets": " | 至尊饮食",
     "": "",
 }
 
