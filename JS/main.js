@@ -1,5 +1,35 @@
 let diff = 0;
 const eggImgPath = 'Imgs/Eggs/'
+
+function addOfflineProgress(time) {
+    updateResearch()
+    updateEggValueBonus()
+    updateIntHatch()
+    updateLayRate()
+
+    currentEggValue = data.onPlanet === false ? eggData[data.currentEgg].value.times(eggValueBonus) : planetEggValue[data.currentPlanetIndex].times(eggValueBonus)
+    data.chickens = data.onPlanet === true && data.currentPlanetIndex === 1 ? data.chickens.plus(chickenGain.times(time/60)) : data.chickens.plus(chickenGain.times(time/15))
+    data.money = data.onPlanet === true && data.currentPlanetIndex === 1 ? data.money.add(((currentEggValue.times(soulEggBoost)).mul(time/4)).times(data.chickens.times(layRate))) : data.money.add(((currentEggValue.times(soulEggBoost)).mul(time)).times(data.chickens.times(layRate)))
+    if(data.bestRunMoney.lt(data.money)) data.bestRunMoney = data.money
+
+    //Stats Updates
+    for(let i = data.unlockedEgg.length - 1; i > -1; i--) {
+        if(data.unlockedEgg[i] === true) {
+            data.stats.bestEgg = eggData[i+1].name
+            break
+        }
+        if(i === 0 && data.unlockedEgg[i] === false) {
+            data.stats.bestEgg = 'Regular'
+        }
+    }
+    if(data.stats.bestMoney.lt(data.money)) data.stats.bestMoney = data.money
+    if(data.stats.bestChickens.lt(data.chickens)) data.stats.bestChickens = data.chickens
+    if(data.stats.bestSoulEggs.lt(data.bestSoulEggs)) data.stats.bestSoulEggs = data.bestSoulEggs
+    if(data.stats.bestProphecyEggs.lt(data.prophecyEggs)) data.stats.bestProphecyEggs = data.prophecyEggs
+    data.stats.timePlayed = data.stats.timePlayed.plus(time)
+    data.stats.timeInPrestige = data.stats.timeInPrestige.plus(time)
+}
+
 function mainLoop() {
     diff = (Date.now()-data.time)*data.devSpeed/1000
     updateResearch()
