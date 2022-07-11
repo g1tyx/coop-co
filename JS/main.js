@@ -183,7 +183,7 @@ function closeModal(i) {
 }
 
 function setTheme() {
-    const themeNames = ['Original','StarStream','White']
+    const themeNames = ['Original','StarStream','Aqua','White']
     document.querySelectorAll("link").forEach( function(e) {
         if (e.href.includes("Theme")) e.remove();
     });
@@ -199,7 +199,7 @@ function setTheme() {
 }
 
 function changeTheme() {
-    const themeDisplayNames = ['Original','Void Stream','Flashbang']
+    const themeDisplayNames = ['Original','Void Stream','Aqua','Flashbang']
     data.themeIndex++
     if(data.themeIndex >= themeDisplayNames.length) data.themeIndex = 0
     DOMCacheGetOrSet('setTog4').innerText = `Theme: ${themeDisplayNames[data.themeIndex]}`
