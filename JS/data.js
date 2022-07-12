@@ -162,9 +162,10 @@ window.onload = function (){
             generateContract(i)
         data.regeneratedContracts = true
     }
-    const themeDisplayNames = ['Original','Void Stream','Flashbang']
+    const themeDisplayNames = ['Original','Void Stream','Aqua','Flashbang']
     DOMCacheGetOrSet('setTog4').innerText = `Theme: ${themeDisplayNames[data.themeIndex]}`
     setTheme()
+    updateEggAchievements()
 }
 //full reset
 function fullReset(){

@@ -1,7 +1,7 @@
 const achievementNames = [
 //Egg Discovery Section
 'Eggcellent','Superegg','Meggdical','Rockegg Fuel','Uber Material','Fused','Quantum Flux','Fountain of Youth','Time and Space',
-'Gravity Well','Diliuted','Prodigy Child','Terraforming Mars','Anti Anti Matter','Moar Matter','AEgg','Nebulous','Universal Problem','Egglightenment',
+'Gravity Well','Diliuted','Prodigy Child','Terraforming Mars','Anti Anti Matter Club','Dark and Devious','EggI','Nebulous','Universal Problem','Egglightenment',
 //Contracts Section
 'Contracted','Contractual','Contractful','Contractor',
 //Soul and Prophecy Section
@@ -23,7 +23,7 @@ const achievementDescriptions = [
 'Get 10 Prophecy Eggs','Get 1 Thousand Prophecy Eggs','Get 1 Million Prophecy Eggs','Get 10 Million Prophecy Eggs',
 //Planets and Knowledge
 'Unlock the 1st Planet','Unlock the 2nd Planet','Unlock the 3rd Planet','Unlock the 4th Planet','Unlock the 5th Planet','Unlock the 6th Planet',
-'Acquire 100 Knowledge','Acquire 1 Thousand Knowledge','Acquire 10 Thousand Knowledge','Acquire 100 Thousand Knowledge'
+'Acquire 100 Knowledge','Acquire 1 Thousand Knowledge','Acquire 10 Thousand Knowledge','Acquire 1 Million Knowledge'
 ]
 
 function updateAchText(i) {
@@ -38,8 +38,16 @@ function getAchievement(i) {
     data.achievements[i] = true
     $.notify(`${achievementNames[i]} Unlocked!`,'success')
     updateAchClass()
+    updateEggAchievements()
 }
-
+function updateEggAchievements() {
+    for(let i = 0; i < data.unlockedEgg.length; i++) {
+        if(data.unlockedEgg[i] === false && DOMCacheGetOrSet(`ach${i+1}`).getAttribute('src') !== `${eggImgPath}question.png`)
+            DOMCacheGetOrSet(`ach${i+1}`).setAttribute('src',`${eggImgPath}question.png`)
+        else if(data.unlockedEgg[i] === true && DOMCacheGetOrSet(`ach${i+1}`).getAttribute('src') !== `${eggImgPath}${eggData[i+1].id}.png`)
+            DOMCacheGetOrSet(`ach${i+1}`).setAttribute('src',`${eggImgPath}${eggData[i+1].id}.png`)
+    }
+}
 function checkAchievements() {
     //Eggs
     if(data.achievements[0] === false) getAchievement(0)
@@ -60,7 +68,7 @@ function checkAchievements() {
     //Planets and Knowledge
     for(let i = 31; i < 37; i++)
         if(data.planetsDiscovered[i-31] === true && data.achievements[i] === false) getAchievement(i)
-    const knowledgeAchReq = [D(100),D(1e3),D(1e4),D(1e5)]
+    const knowledgeAchReq = [D(100),D(1e3),D(1e4),D(1e6)]
     for(let i = 37; i < 41; i++)
         if(data.knowledge.gte(knowledgeAchReq[i-37]) && data.achievements[i] === false) getAchievement(i)
 }
