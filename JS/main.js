@@ -76,7 +76,7 @@ function mainLoop() {
 }
 
 function changeTab(i) {
-    const tabIDs = ['egg','research','contracts','settings','prestige','eggpedition','enlightenment','achievement']
+    const tabIDs = ['egg','research','contracts','settings','prestige','eggpedition','enlightenment','achievement','ascension']
     data.currentTab = i
     for(let i = 0; i < tabIDs.length; i++) {
         DOMCacheGetOrSet(`${tabIDs[i]}Tab`).style.display = i === data.currentTab ? 'flex' : 'none'
