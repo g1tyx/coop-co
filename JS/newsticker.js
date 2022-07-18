@@ -33,7 +33,9 @@ newsArray = [//always true
     ['It\'s eggcellent how much progress you\'re making!'],['The next statement is true. The previous statement is false.','true'],['All of the king\'s horses and all of the king\'s men could have put Humpty Dumpty together again if he was made out of Supermaterial','true'],['The chance of seeing this news message is the chance of getting two egg yolks in one egg! (1/1000 chance)','getRandom(1,1000) === 1000'],
     ['Stop paying attention to the news ticker and focus on the actual game! Isn\'t that what you came here for?','true'],['Eating an Ancient Egg in Ancient Greece be like...','true'],['how many soul eggs is one soul worth?','true'],['Can we use these soul eggs to create a soul?','true'],
     ['<i>Introducing Prestige™ - a way to fuse yourself with the egg. Become the egg. Join our master. D̶̃͗O̷̿̂ ̴̧̌I̷̓͆T̶͈̓ ̵͆̈́Ń̴͒O̸͕̓Ẇ̸͘</i>'],['whatchu know about hatchin all of the eggs','true'],['Taxes are not real, they can\'t hurt you.                                   Taxes:','true'],['How are you able to achieve immortality with eggs?','true'],
-    ['What kind of chickens are able to lay these eggs???','true'],['Tachyon Eggs don\'t reverse time, but the Tachyon chickens do.. isn\'t it kinda strange?','data.unlockedEgg[8] === true'],['What came first? The chicken or the egg?','true'],
+    ['What kind of chickens are able to lay these eggs???','true'],['Tachyon Eggs don\'t reverse time, but the Tachyon chickens do.. isn\'t it kinda strange?','data.unlockedEgg[8] === true'],['What came first? The chicken or the egg?','true'],['Soul Eggs heard enough jokes about them, so they would like to become Souls','true'],
+    ['Never gonna give you up, never gonna let you down, never gonna throw an egg at you','true'],['Here\'s a pro tip............ it\'s coming......... this may take a while.......... any second now........... git gud.','true'],
+
     
     
 ];}
