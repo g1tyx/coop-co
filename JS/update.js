@@ -28,7 +28,7 @@ function updateHTML() {
     DOMCacheGetOrSet('contractButton').style.display = data.inPath === false ? 'block' : 'none'
     DOMCacheGetOrSet('enlightenmentTabButton').style.display = data.unlockedEgg[17] === true ? 'block' : 'none'
     DOMCacheGetOrSet('contractButton').style.display = data.onPlanet === false ? 'block' : 'none'
-    DOMCacheGetOrSet('ascensionButton').innerText = data.bestRunMoney.lt(1e78) ? `Reach: $${format(1e78)}` : 'Ascend +0.00 Holy Eggs'
+    DOMCacheGetOrSet('ascensionButton').innerText = data.bestRunMoney.lt(1e78) ? `Reach: $${format(1e78)}` : `Ascend +${format(holyEggGain)} Holy Eggs`
     DOMCacheGetOrSet('ascensionButton').classList = data.bestRunMoney.lt(1e78) ? 'locked' : 'ascensionHeader'
     //hm
     DOMCacheGetOrSet('eggpeditionTabButton').style.display = data.unlockedEgg[2] === true ? 'block' : 'none'
