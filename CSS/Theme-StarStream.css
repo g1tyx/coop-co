@@ -12,6 +12,7 @@
     --prestige-color: #b862ff;
     --prophecy-color: #fdff70;
     --enlightenment-color: #fff38b;
+    --ascension-color: #ffb662;
 }
 
 /*Globals*/
@@ -110,8 +111,8 @@ h1,h2,h3,h4 { margin-bottom: 1vh;}
 .enlightenment {border-color:var(--enlightenment-color);color: var(--enlightenment-color);}
 .enlightenment:hover {border-color: var(--enlightenment-color);color: var(--bg-color);background-color: var(--enlightenment-color);}
 
-.temple {color:whitesmoke;background-color: black;}
-.temple:hover {border-color: black;color:black}
+.ascension {color:var(--ascension-color);border-color: var(--ascension-color);}
+.ascension:hover {background-color: var(--ascension-color);color:var(--bg-color)}
 
 .achLock {width: 2em;height: 2em;border: 2px solid #9c0f0f;padding: 3px;margin: 4px;}
 .achUnlock {width: 2em;height: 2em;border: 2px solid #1a9c0f;padding: 3px;background-color: var(--unlocked-color);margin: 4px;}
@@ -258,7 +259,7 @@ h1,h2,h3,h4 { margin-bottom: 1vh;}
 
 #mainHeader img, #mainHeader h2, #mainHeader div {background-color: var(--header-color);}
 #mainHeader div {margin: 1vh; color:whitesmoke}
-#moneyText {animation: ghostifybtntext 16s linear infinite;}
+#moneyText {animation: ghostifybtntext 16s linear infinite; margin:1vh;}
 #promptInput {background-color: var(--bg-color); border: 2px solid; border-radius: 2px;}
 /*
 <div class="notifyjs-wrapper notifyjs-hidable">

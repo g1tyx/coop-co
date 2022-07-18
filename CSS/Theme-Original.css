@@ -12,6 +12,7 @@
     --prestige-color: #8e3dcf;
     --prophecy-color: #cdcf3d;
     --enlightenment-color: #ffee48;
+    --ascension-color: #cf903d;
 }
 
 /*Globals*/
@@ -100,8 +101,11 @@ h1,h2,h3,h4 { margin-bottom: 1vh;}
 .enlightenment {border-color:var(--enlightenment-color);color: var(--enlightenment-color);}
 .enlightenment:hover {border-color: var(--enlightenment-color);color: var(--bg-color);background-color: var(--enlightenment-color);}
 
-.temple {color:whitesmoke;background-color: black;}
-.temple:hover {border-color: black;color:black}
+.ascension {color:var(--ascension-color);border-color: var(--ascension-color);}
+.ascension:hover {background-color: var(--ascension-color);color:var(--bg-color)}
+
+.ascensionHeader {color:var(--ascension-color);border-color: var(--ascension-color);background-color: var(--header-color);}
+.ascensionHeader:hover {background-color: var(--ascension-color);color:var(--header-color)}
 
 .achLock {width: 2em;height: 2em;border: 2px solid whitesmoke;border-radius: 2px;padding: 3px;margin: 4px;}
 .achUnlock {width: 2em;height: 2em;border: 2px solid whitesmoke;border-radius: 2px;padding: 3px;background-color: var(--unlocked-color);margin: 4px;}
