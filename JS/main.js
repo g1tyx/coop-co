@@ -100,17 +100,17 @@ function toggleBA(i) {
 }
 
 function updateStats() {
-    DOMCacheGetOrSet('stat0').textContent = `Best Money: $${format(data.stats.bestMoney)}`
-    DOMCacheGetOrSet('stat1').textContent = `Best Egg: ${data.stats.bestEgg}`
-    DOMCacheGetOrSet('stat2').textContent = `Best Chickens: ${format(data.stats.bestChickens)}`
-    DOMCacheGetOrSet('stat3').textContent = `Contracts Completed: ${format(data.stats.contractsComplete)}`
-    DOMCacheGetOrSet('stat4').textContent = `Time Played: ${formatTime(data.stats.timePlayed)}`
-    DOMCacheGetOrSet('stat5').textContent = `Prestige 1: ${format(data.stats.prestiges[0])} Soul Eggs`
-    DOMCacheGetOrSet('stat6').textContent = `Prestige 2: ${format(data.stats.prestiges[1])} Soul Eggs`
-    DOMCacheGetOrSet('stat7').textContent = `Prestige 3: ${format(data.stats.prestiges[2])} Soul Eggs`
-    DOMCacheGetOrSet('stat8').textContent = `Time In Current Run: ${formatTime(data.stats.timeInPrestige)}`
-    DOMCacheGetOrSet('stat9').textContent = `Best Soul Eggs: ${format(data.stats.bestSoulEggs)}`
-    DOMCacheGetOrSet('stat10').textContent = `Best Prophecy Eggs: ${format(data.stats.bestProphecyEggs)}`
+    DOMCacheGetOrSet('stat0').innerText = `Best Money: $${format(data.stats.bestMoney)}`
+    DOMCacheGetOrSet('stat1').innerText = `Best Egg: ${data.stats.bestEgg}`
+    DOMCacheGetOrSet('stat2').innerText = `Best Chickens: ${format(data.stats.bestChickens)}`
+    DOMCacheGetOrSet('stat3').innerText = `Contracts Completed: ${format(data.stats.contractsComplete)}`
+    DOMCacheGetOrSet('stat4').innerText = `Time Played: ${formatTime(data.stats.timePlayed)}`
+    DOMCacheGetOrSet('stat5').innerText = `Prestige 1: ${format(data.stats.prestiges[0])} Soul Eggs`
+    DOMCacheGetOrSet('stat6').innerText = `Prestige 2: ${format(data.stats.prestiges[1])} Soul Eggs`
+    DOMCacheGetOrSet('stat7').innerText = `Prestige 3: ${format(data.stats.prestiges[2])} Soul Eggs`
+    DOMCacheGetOrSet('stat8').innerText = `Time In Current Run: ${formatTime(data.stats.timeInPrestige)}`
+    DOMCacheGetOrSet('stat9').innerText = `Best Soul Eggs: ${format(data.stats.bestSoulEggs)}`
+    DOMCacheGetOrSet('stat10').innerText = `Best Prophecy Eggs: ${format(data.stats.bestProphecyEggs)}`
 }
 
  function createAlert(a,b,c) {

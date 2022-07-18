@@ -1,7 +1,7 @@
 function updateHTML() {
     //Globals
-    DOMCacheGetOrSet('moneyText').textContent = `$${format(data.money)}`
-    DOMCacheGetOrSet('chickensText').textContent = `Chickens: ${format(data.chickens)}`
+    DOMCacheGetOrSet('moneyText').innerText = `$${format(data.money)}`
+    DOMCacheGetOrSet('chickensText').innerText = `Chickens: ${format(data.chickens)}`
     if(data.onPlanet === false) {
         if(DOMCacheGetOrSet('currentEggImgHeader').getAttribute('src') !== `${eggImgPath}${eggData[data.currentEgg].id}.png`) 
         DOMCacheGetOrSet('currentEggImgHeader').setAttribute('src', `${eggImgPath}${eggData[data.currentEgg].id}.png`)
@@ -23,11 +23,13 @@ function updateHTML() {
     DOMCacheGetOrSet('prestigeTabButton').style.display = data.hasPrestiged === true ? 'block' : 'none'
     DOMCacheGetOrSet('prestigeButton').classList = data.currentEgg < 3 ? 'locked' : 'prestigeHeader'
     DOMCacheGetOrSet('prestigeButton').style.display = contractActive() || data.inPath === true || data.onPlanet === true ? 'none' : 'block'
-    DOMCacheGetOrSet('prestigeButton').textContent = data.currentEgg < 3 ? 'Reach Rocket Fuel Eggs' : `Prestige: +${format(soulEggGain)} Soul Eggs`
+    DOMCacheGetOrSet('prestigeButton').innerText = data.currentEgg < 3 ? 'Reach Rocket Fuel Eggs' : `Prestige: +${format(soulEggGain)} Soul Eggs`
     DOMCacheGetOrSet('newsHolder').style.display = data.settingsToggles[1] ? 'block' : 'none'
     DOMCacheGetOrSet('contractButton').style.display = data.inPath === false ? 'block' : 'none'
     DOMCacheGetOrSet('enlightenmentTabButton').style.display = data.unlockedEgg[17] === true ? 'block' : 'none'
     DOMCacheGetOrSet('contractButton').style.display = data.onPlanet === false ? 'block' : 'none'
+    DOMCacheGetOrSet('ascensionButton').innerText = data.money.lt(1e78) ? `Reach: $${format(1e78)}` : 'Ascend +0.00 Currency'
+    DOMCacheGetOrSet('ascensionButton').classList = data.money.lt(1e78) ? 'locked' : 'ascensionHeader'
     //hm
     DOMCacheGetOrSet('eggpeditionTabButton').style.display = data.unlockedEgg[2] === true ? 'block' : 'none'
     if(data.currentTab === 0) {
@@ -108,5 +110,8 @@ function updateHTML() {
     }
     else if(data.currentTab === 7) {
         
+    }
+    else if(data.currentTab === 8) {
+
     }
 }
