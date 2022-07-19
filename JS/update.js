@@ -36,7 +36,7 @@ function updateHTML() {
         DOMCacheGetOrSet('ascensionButton').innerText = `Unavailable`
         DOMCacheGetOrSet('ascensionButton').classList = 'locked'
     }
-    
+    DOMCacheGetOrSet('ascensionTabButton').style.display = data.hasAscended === true ? 'block' : 'none'
     //hm
     DOMCacheGetOrSet('eggpeditionTabButton').style.display = data.unlockedEgg[2] === true ? 'block' : 'none'
     if(data.currentTab === 0) {
