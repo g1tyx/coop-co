@@ -121,6 +121,7 @@ function updateHTML() {
     else if(data.currentTab === 8) {
         if(data.currentSubTab[1] === 0) {
             updateAscensionHTML()
+            DOMCacheGetOrSet('holyEggText').innerText = `Holy Eggs: ${format(data.holyEggs)}`
         }
     }
 }
