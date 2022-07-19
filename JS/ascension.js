@@ -1,4 +1,6 @@
 let holyEggGain = D(0)
+const milestoneDescs = ['Unlock an Egg Value Bonus','Automation and Start with 1 Chicken doesn\'t reset','']
+
 
 function updateAscension() {
     holyEggGain = data.bestRunMoney.gte(1e78) ? Decimal.sqrt(data.bestRunMoney.div(1e78)) : D(0)

@@ -53,7 +53,8 @@ function getDefaultObject() {
         planetData: [{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))}],
         holyEggs: D(0),
         hasAscended: false,
-        achievements: new Array(41).fill(false),
+        milestones: new Array(5).fill(false),
+        achievements: new Array(46).fill(false),
         stats: {
             bestMoney: D(0),
             bestEgg: '',

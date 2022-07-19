@@ -104,6 +104,9 @@ h1,h2,h3,h4 { margin-bottom: 1vh;}
 .ascension {color:var(--ascension-color);border-color: var(--ascension-color);}
 .ascension:hover {background-color: var(--ascension-color);color:var(--bg-color)}
 
+.milestoneLocked {background-color: var(--locked-color); border: 2px solid var(--ascension-color); padding:4px;text-align: center;margin:.5vh;max-width: 25em;}
+.milestoneUnlocked {background-color: var(--unlocked-color); border: 2px solid var(--ascension-color); padding:4px;text-align: center;margin:.5vh;max-width: 25em;}
+
 .achLock {width: 2em;height: 2em;border: 2px solid whitesmoke;border-radius: 2px;padding: 3px;margin: 4px;}
 .achUnlock {width: 2em;height: 2em;border: 2px solid whitesmoke;border-radius: 2px;padding: 3px;background-color: var(--unlocked-color);margin: 4px;}
 .achPlaceholder {width: 2em;height: 2em;border: 2px solid whitesmoke;border-radius: 2px;padding: 3px;margin: 4px;}
