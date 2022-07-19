@@ -32,6 +32,7 @@ function ascend() {
 
     data.holyEggs = data.holyEggs.plus(holyEggGain)
     data.enlightenments = new Array(5).fill(D(0))
+    data.knowledge = D(0)
     data.planetData = [{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))}]
     data.bestSoulEggs = data.soulEggs = data.prophecyEggs = D(0)
     if(!data.milestones[1]) {
