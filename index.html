@@ -237,6 +237,7 @@
                 <button id="auto1"></button>
                 <button id="auto3"></button>
             </div>
+            <button>Sun Tzu Button</button>
         </div>
         <div id="contractsTab" class="flexCol tabHolder">
             <h3>Contracts</h3>
@@ -354,10 +355,27 @@
             </p>
         </div>
         <div id="ascensionTab" class="flexCol tabHolder">
-            <h3 style="color:var(--ascension-color)">Ascension</h3>
-            <div class="flexRow">
-                <img src="Imgs/Eggs/holy.png">
-                <h4 id="holyEggText" style="color:var(--ascension-color)">Holy Eggs: 0.00</h4>
+            <div style="margin-bottom:1vh">
+                <button onclick="changeSubTab(1,0)" class="ascension">Milestones</button>
+                <button onclick="changeSubTab(1,1)" class="ascension">Altar</button>
+                <button onclick="changeSubTab(1,2)" class="ascension">???</button>
+            </div>
+            <div id="ascSub0" class="flexCol">
+                <h3 style="color:var(--ascension-color)">Milestones</h3>
+                <div class="flexRow">
+                    <img src="Imgs/Eggs/holy.png">
+                    <h4 id="holyEggText" style="color:var(--ascension-color)">Holy Eggs: 0.00</h4>
+                </div>
+                <div class="flexCol" style="margin-top:1vh">
+                    <div id="milestone0" class="milestoneLocked">Milestone-1<br>Description</div>
+                    <div id="milestone1" class="milestoneUnlocked">Milestone-2<br>Description</div>
+                </div>
+            </div>
+            <div id="ascSub1" class="flexCol">
+                <h3 style="color:var(--ascension-color)">Altar</h3>
+            </div>
+            <div id="ascSub2" class="flexCol">
+                <h3 style="color:var(--ascension-color)">???</h3>
             </div>
         </div>
         <div id="achievementTab" class="flexCol tabHolder">
@@ -417,11 +435,11 @@
                     <img id="ach39" src="Imgs/lightbulb.png" class="achLock">
                     <img id="ach40" src="Imgs/lightbulb.png" class="achLock">
                     <div class="achPlaceholder"></div>
-                    <div class="achPlaceholder"></div>
-                    <div class="achPlaceholder"></div>
-                    <div class="achPlaceholder"></div>
-                    <div class="achPlaceholder"></div>
-                    <div class="achPlaceholder"></div>
+                    <div id="ach41" src="Imgs/Eggs/holy.png" class="achLock"></div>
+                    <div id="ach42" src="Imgs/Eggs/holy.png" class="achLock"></div>
+                    <div id="ach43" src="Imgs/Eggs/holy.png" class="achLock"></div>
+                    <div id="ach44" src="Imgs/Eggs/holy.png" class="achLock"></div>
+                    <div id="ach45" src="Imgs/Eggs/holy.png" class="achLock"></div>
                 </div>
             </div>
             <p id="achHoverText" style="text-align:center">Hover Over An Image to See Its Description</p>
@@ -483,21 +501,22 @@
                 <h3>Stats</h3>
                 <div style="display:flex;flex-direction:row;margin-right: 1vw;">
                     <div style="display:flex;flex-direction:column;">
-                        <h4 id="stat0">Best Money: $0.00</h4>
-                        <h4 id="stat1">Best Egg: Regular</h4>
-                        <h4 id="stat2">Best Chickens: 0.00</h4>
-                        <h4 id="stat3">Contracts Completed: 0</h4>
-                        <h4 id="stat4">Time Played (Includes Time Away): 0</h4>
+                        <h4 id="stat0" style="color:var(--unlocked-color)">Best Money: $0.00</h4>
+                        <h4 id="stat11" style="color:var(--unlocked-color)">Best Money in Run: $0.00</h4>
+                        <h4 id="stat1" style="color:var(--maxed-color)">Best Egg: Regular</h4>
+                        <h4 id="stat2" style="color:var(--maxed-color)">Best Chickens: 0.00</h4>
+                        <h4 id="stat3" style="color:var(--maxed-color)">Contracts Completed: 0</h4>
+                        <h4 id="stat4" style="color:var(--maxed-color)">Time Played (Includes Time Away): 0</h4>
                     </div>
                     <div style="display:flex;flex-direction:column;margin-left: 1vw;">
-                        <h3>Last 3 Prestiges</h3>
-                        <h4 id="stat5">Prestige 1: 0 Soul Eggs</h4>
-                        <h4 id="stat6">Prestige 2: 0 Soul Eggs</h4>
-                        <h4 id="stat7">Prestige 3: 0 Soul Eggs</h4>
-                        <h3>Other Prestige Stats</h3>
-                        <h4 id="stat9">Best Soul Eggs: 0</h4>
-                        <h4 id="stat10">Best Prophecy Eggs: 0</h4>
-                        <h4 id="stat8">Time in Current Prestige: 0</h4>
+                        <h3 style="color:var(--prestige-color)">Last 3 Prestiges</h3>
+                        <h4 id="stat5" style="color:var(--prestige-color)">Prestige 1: 0 Soul Eggs</h4>
+                        <h4 id="stat6" style="color:var(--prestige-color)">Prestige 2: 0 Soul Eggs</h4>
+                        <h4 id="stat7" style="color:var(--prestige-color)">Prestige 3: 0 Soul Eggs</h4>
+                        <h3 style="color:var(--prestige-color)">Other Prestige Stats</h3>
+                        <h4 id="stat9" style="color:var(--prestige-color)">Best Soul Eggs: 0</h4>
+                        <h4 id="stat10" style="color:var(--prophecy-color)">Best Prophecy Eggs: 0</h4>
+                        <h4 id="stat8" style="color:var(--prestige-color)">Time in Current Prestige: 0</h4>
                     </div>
                 </div>
             </div>

@@ -69,7 +69,7 @@ function getDefaultObject() {
         buyAmounts: [0,0,0],
         time: Date.now(),
         currentTab: 0,
-        currentSubTab: [0],
+        currentSubTab: [0,0],
         settingsToggles: [true,true,true,true],
         currentUpdate: 'v1.1.5',
         devSpeed: 1,
@@ -91,6 +91,13 @@ function load() {
     //Update 1.0.0 Saves to Current Version
     if(data.currentUpdate !== getDefaultObject().currentUpdate){
         createAlert("Welcome Back!",`The current version is ${getDefaultObject().currentUpdate}, View the Changelog (in settings) for details`,"812626")
+        const versionResetCodes = ['v1.0.0','v1.0.1','v1.0.2','v1.0.3','v1.0.4','v1.0.5','v1.0.6','v1.0.7','v1.0.8','v1.0.9','v1.0.10','v1.0.11','v1.1.0'
+        ,'v1.1.0','v1.1.1','v1.1.2','v1.1.3']
+        for(let i = 0; i < versionResetCodes.length; i++) {
+            if(data.currentUpdate === versionResetCodes[i]) {
+
+            }
+        }
         data.currentUpdate = getDefaultObject().currentUpdate  
     }
     for(let i = 0; i < data.buyAmounts.length; i++) {

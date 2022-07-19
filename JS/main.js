@@ -85,8 +85,8 @@ function changeTab(i) {
 }
 
 function changeSubTab(a,b) {
-    const subAmts = [2]
-    const subIDs = ['set']
+    const subAmts = [2,2]
+    const subIDs = ['set','asc']
     data.currentSubTab[a] = b
     for(let i = 0; i <= subAmts[a]; i++) {
         DOMCacheGetOrSet(`${subIDs[a]}Sub${i}`).style.display = i === data.currentSubTab[a] ? 'flex' : 'none'
@@ -112,6 +112,7 @@ function updateStats() {
     DOMCacheGetOrSet('stat8').innerText = `Time In Current Run: ${formatTime(data.stats.timeInPrestige)}`
     DOMCacheGetOrSet('stat9').innerText = `Best Soul Eggs: ${format(data.stats.bestSoulEggs)}`
     DOMCacheGetOrSet('stat10').innerText = `Best Prophecy Eggs: ${format(data.stats.bestProphecyEggs)}`
+    DOMCacheGetOrSet('stat11').innerText = `Best Money in Run: $${format(data.bestRunMoney)}`
 }
 
  function createAlert(a,b,c) {
