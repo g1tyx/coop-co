@@ -40,6 +40,7 @@ function mainLoop() {
     updateEnlightenment()
     updateAutomation()
     updateAscension()
+    updateMilestones()
     if(data.chickens.lt(1) && data.epicResearch[8].gte(epicResearchMaxLevel[8]))
         data.chickens = D(1)
     for(let i = 0; i < data.contractActive.length; i++) {
@@ -167,7 +168,7 @@ function createConfirmation(a) {
             break
         case 'ascend':
             if(data.bestRunMoney.lt(1e78)) return
-            document.getElementById('confirmContainer').style.border = `4px solid var(--ascend-color)`
+            document.getElementById('confirmContainer').style.border = `4px solid var(--ascension-color)`
             document.getElementById('confirmTitle').innerText = 'Are you sure you want to ascend?'
             document.getElementById('confirmContent').innerText = 'This will reset all progress before ascension.'
             document.getElementById('confirm').style.display = 'block'

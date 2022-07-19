@@ -198,6 +198,7 @@ function updateEggValueBonus() {
     eggValueBonus = eggValueBonus.times(planetBoosts[5])
     if(data.onPlanet === true)
       eggValueBonus = eggValueBonus.times(planetBoosts[0])
+    eggValueBonus = eggValueBonus.times(milestoneBoosts[0])
 }
 
 function updateIntHatch() {

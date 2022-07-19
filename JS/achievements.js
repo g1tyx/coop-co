@@ -27,7 +27,7 @@ const achievementDescriptions = [
 'Unlock the 1st Planet','Unlock the 2nd Planet','Unlock the 3rd Planet','Unlock the 4th Planet','Unlock the 5th Planet','Unlock the 6th Planet',
 'Acquire 100 Knowledge','Acquire 1 Thousand Knowledge','Acquire 10 Thousand Knowledge','Acquire 1 Million Knowledge',
 //Ascension
-'Unlock Milestone 1','Unlock Milestone 2','Unlock Milestone 3','Unlock Milestone 4','Unlock Milestone 5'
+'Unlock Milestone 01','Unlock Milestone 02','Unlock Milestone 03','Unlock Milestone 04','Unlock Milestone 05'
 ]
 
 function updateAchText(i) {

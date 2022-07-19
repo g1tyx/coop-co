@@ -28,8 +28,15 @@ function updateHTML() {
     DOMCacheGetOrSet('contractButton').style.display = data.inPath === false ? 'block' : 'none'
     DOMCacheGetOrSet('enlightenmentTabButton').style.display = data.unlockedEgg[17] === true ? 'block' : 'none'
     DOMCacheGetOrSet('contractButton').style.display = data.onPlanet === false ? 'block' : 'none'
-    DOMCacheGetOrSet('ascensionButton').innerText = data.bestRunMoney.lt(1e78) ? `Reach: $${format(1e78)}` : `Ascend +${format(holyEggGain)} Holy Eggs`
-    DOMCacheGetOrSet('ascensionButton').classList = data.bestRunMoney.lt(1e78) ? 'locked' : 'ascensionHeader'
+    if(!data.onPlanet && !data.inPath && !contractActive()) {
+        DOMCacheGetOrSet('ascensionButton').innerText = data.bestRunMoney.lt(1e78) ? `Reach: $${format(1e78)}` : `Ascend +${format(holyEggGain)} Holy Eggs`
+        DOMCacheGetOrSet('ascensionButton').classList = data.bestRunMoney.lt(1e78) ? 'locked' : 'ascensionHeader'
+    }
+    else {
+        DOMCacheGetOrSet('ascensionButton').innerText = `Unavailable`
+        DOMCacheGetOrSet('ascensionButton').classList = 'locked'
+    }
+    
     //hm
     DOMCacheGetOrSet('eggpeditionTabButton').style.display = data.unlockedEgg[2] === true ? 'block' : 'none'
     if(data.currentTab === 0) {
@@ -112,6 +119,8 @@ function updateHTML() {
         
     }
     else if(data.currentTab === 8) {
-
+        if(data.currentSubTab[1] === 0) {
+            updateAscensionHTML()
+        }
     }
 }
