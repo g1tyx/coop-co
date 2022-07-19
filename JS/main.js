@@ -147,7 +147,7 @@ function createConfirmation(a) {
     switch(a) {
         case 'prestige':
             if(data.currentEgg < 3) return
-            document.getElementById('confirmContainer').style.border = `4px solid #8e3dcf`
+            document.getElementById('confirmContainer').style.border = `4px solid var(--prestige-color)`
             document.getElementById('confirmTitle').innerText = 'Are you sure you want to prestige?'
             document.getElementById('confirmContent').innerText = 'This will reset all progress for Soul Eggs'
             document.getElementById('confirm').style.display = 'block'
@@ -163,6 +163,16 @@ function createConfirmation(a) {
             document.getElementById('confirmContainer').style.display = 'block'
             document.getElementById('noConfirm').addEventListener('click', () => {closeModal(2)})
             document.getElementById('yesConfirm').addEventListener('click', () => {fullReset();closeModal(2)})
+            break
+        case 'ascend':
+            if(data.bestRunMoney.lt(1e78)) return
+            document.getElementById('confirmContainer').style.border = `4px solid var(--ascend-color)`
+            document.getElementById('confirmTitle').innerText = 'Are you sure you want to ascend?'
+            document.getElementById('confirmContent').innerText = 'This will reset all progress before ascension.'
+            document.getElementById('confirm').style.display = 'block'
+            document.getElementById('confirmContainer').style.display = 'block'
+            document.getElementById('noConfirm').addEventListener('click', () => {closeModal(2)})
+            document.getElementById('yesConfirm').addEventListener('click', () => {ascend();closeModal(2)})
     }
 }
 function closeModal(i) {
