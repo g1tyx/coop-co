@@ -44,7 +44,8 @@ function ascend() {
             data.epicResearch[i] = D(0)
         }
     }
-    
+    for(let i = 0; i < 3; i++)
+        generateContract(i)
     data.stats.timeInPrestige = D(0)
     data.hasPrestiged = true
     data.research = new Array(28).fill(D(0))
