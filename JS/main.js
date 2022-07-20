@@ -1,5 +1,10 @@
 let diff = 0;
 const eggImgPath = 'Imgs/Eggs/'
+const badSunTzuQuotes = ['"All warfare is based on deception" - Sun Tzu','"I recently decided to become a Buddhist, war got boring" -Sun Tzu',
+'"I don\'t like eggs" -Moon Wu','"Moon Wu is not cool, he just took my birth name and changed sun to moon" -Sun Tzu on the principles of Identity theft',
+'"Yes" -Sun Tzu at least one time in his life','"If you know your enemy and you know yourself, why are you wasting your time reading this. Win the battle" -Sun Tzu',
+'"I hope people don\'t find these terracotta warriors" -Sun Tzu when having people make his terracotta warriors',
+'"Eggs taste pretty good" -Sun Tzu','"I\'ll take your finest $1e60 carton of eggs. Thanks" -Sun Tzu','"I don\'t know who this "Sun Tzu" guy is but I know I am the real one" -The Real Sun Tzu#5066']
 
 function addOfflineProgress(time) {
     updateResearch()
@@ -217,6 +222,12 @@ function changeTheme() {
     if(data.themeIndex >= themeDisplayNames.length) data.themeIndex = 0
     DOMCacheGetOrSet('setTog4').innerText = `Theme: ${themeDisplayNames[data.themeIndex]}`
     setTheme()
+}
+let quoteIndex = -1
+function toggleSunTzuButton() {
+    quoteIndex++;
+    if(quoteIndex >= badSunTzuQuotes.length) quoteIndex = 0
+    DOMCacheGetOrSet('sunTzuButton').innerText = `${badSunTzuQuotes[quoteIndex]}`
 }
 
 window.setInterval(function() {
