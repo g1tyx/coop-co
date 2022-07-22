@@ -45,7 +45,7 @@ function purchaseResearch(i) {
 }
 function updateResearch() {
     for(let i = 0; i < commonResearchNames.length; i++) {
-        if(data.onPlanet === false)
+        if(data.onPlanet === false || data.currentPlanetIndex !== 0)
             commonResearchCost[i] = (commonResearchBaseCost[i].sub(commonResearchBaseCost[i].times(D(0.05).times(data.epicResearch[1])))).times(Decimal.pow(1.15, data.research[i]))
         else if(data.onPlanet === true && data.currentPlanetIndex === 0)
             commonResearchCost[i] = ((commonResearchBaseCost[i]).sub(commonResearchBaseCost[i].times(D(0.05).times(data.epicResearch[1])))).times(Decimal.pow(1.35, data.research[i]))

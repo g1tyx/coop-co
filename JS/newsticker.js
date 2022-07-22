@@ -36,7 +36,9 @@ newsArray = [//always true
     ['What kind of chickens are able to lay these eggs???','true'],['Tachyon Eggs don\'t reverse time, but the Tachyon chickens do.. isn\'t it kinda strange?','data.unlockedEgg[8] === true'],['What came first? The chicken or the egg?','true'],['Soul Eggs heard enough jokes about them, so they would like to become Souls','true'],
     ['Never gonna give you up, never gonna let you down, never gonna throw an egg at you','true'],['Here\'s a pro tip............ it\'s coming......... this may take a while.......... any second now........... git gud.','true'],
     ['Oh so you are Coop Co. enjoyer? Name every egg and their price'],['have you heard of the new indie horror game "Benedict and The Egg Machine"?','true'],['How can you get an egg that\'s a universe in diameter?','true'],['Click here to get 1 free energy! Oh wait, wrong game...','true'],
-    ['So, you might be thinking: Can I start a company like this in real life? Well, not eggsactly...'],
+    ['So, you might be thinking: Can I start a company like this in real life? Well, not eggsactly...'],['eggs? I love eggs!','true'],['This guy disinflates egg prices in 10 seconds! Void hates him! Find out how!','true'],['"Wait, who\'s Egglon Musk?" -Elom Nusk from the alternate universe','true'],
+    ['BREAKING NEWS: Florida Man starts multiple pandemics to get more prophecy eggs','true'],['Why did the prodigy chicken cross the road? You could just ask him, you know.','true'],['All of these newstickers suck! Here\'s one thats really eggceptional:','true'],
+    ['"Your puns of our unborn children are fowl." - A chicken','true'],
     
     
 ];}
