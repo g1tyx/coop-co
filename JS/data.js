@@ -51,7 +51,7 @@ function getDefaultObject() {
         currentPlanetIndex: 0,
         onPlanet: false,
         planetData: [{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))}],
-        holyEggs: D(0),
+        conflictEggs: D(0),
         hasAscended: false,
         milestones: new Array(5).fill(false),
         achievements: new Array(46).fill(false),

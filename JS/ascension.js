@@ -1,11 +1,11 @@
-let holyEggGain = D(0)
+let conflictEggGain = D(0)
 const milestoneDescs = ['Unlock an Egg Value Bonus','Automation and Start with 1 Chicken doesn\'t reset','Placeholder','Placeholder','Placeholder']
 const milestoneReqs = [D(10),D(150),D(1),D(1),D(1)]
 let milestoneBoosts = [D(1),D(1),D(1),D(1),D(1)]
 
 function updateAscension() {
-    holyEggGain = data.bestRunMoney.gte(1e78) ? Decimal.sqrt(data.bestRunMoney.div(1e78)) : D(0)
-    milestoneBoosts[0] = Decimal.sqrt(data.holyEggs.times(0.5)).plus(1)
+    conflictEggGain = data.bestRunMoney.gte(1e78) ? Decimal.sqrt(data.bestRunMoney.div(1e78)) : D(0)
+    milestoneBoosts[0] = Decimal.sqrt(data.conflictEggs).plus(1)
 }
 
 function updateAscensionHTML() {
@@ -20,7 +20,7 @@ function updateAscensionHTML() {
 
 function updateMilestones() {
     for(let i = 0; i < 2; i++) {
-        if(data.holyEggs.gte(milestoneReqs[i]) && !data.milestones[i])
+        if(data.conflictEggs.gte(milestoneReqs[i]) && !data.milestones[i])
             data.milestones[i] = true
     }
 }
@@ -30,7 +30,7 @@ function ascend() {
     if(data.bestRunMoney.lt(1e78) || data.inPath || data.onPlanet || contractActive()) return
     if(data.hasAscended === false) data.hasAscended = true
 
-    data.holyEggs = data.holyEggs.plus(holyEggGain)
+    data.conflictEggs = data.conflictEggs.plus(conflictEggGain)
     data.enlightenments = new Array(5).fill(D(0))
     data.knowledge = D(0)
     data.planetData = [{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))},{money: D(0), chickens: D(0), research: new Array(28).fill(D(0))}]

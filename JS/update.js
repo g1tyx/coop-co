@@ -29,7 +29,7 @@ function updateHTML() {
     DOMCacheGetOrSet('enlightenmentTabButton').style.display = data.unlockedEgg[17] === true ? 'block' : 'none'
     DOMCacheGetOrSet('contractButton').style.display = data.onPlanet === false ? 'block' : 'none'
     if(!data.onPlanet && !data.inPath && !contractActive()) {
-        DOMCacheGetOrSet('ascensionButton').innerText = data.bestRunMoney.lt(1e78) ? `Reach: $${format(1e78)}` : `Ascend +${format(holyEggGain)} Holy Eggs`
+        DOMCacheGetOrSet('ascensionButton').innerText = data.bestRunMoney.lt(1e78) ? `Reach: $${format(1e78)}` : `Ascend +${format(conflictEggGain)} Conflict Eggs`
         DOMCacheGetOrSet('ascensionButton').classList = data.bestRunMoney.lt(1e78) ? 'locked' : 'ascensionHeader'
     }
     else {
@@ -121,7 +121,7 @@ function updateHTML() {
     else if(data.currentTab === 8) {
         if(data.currentSubTab[1] === 0) {
             updateAscensionHTML()
-            DOMCacheGetOrSet('holyEggText').innerText = `Holy Eggs: ${format(data.holyEggs)}`
+            DOMCacheGetOrSet('conflictEggText').innerText = `Conflict Eggs: ${format(data.conflictEggs)}`
         }
     }
 }
