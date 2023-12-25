@@ -198,9 +198,6 @@ function updateEggValueBonus() {
     eggValueBonus = !data.onPlanet ? eggValueBonus.times(planetBoosts[5]) : eggValueBonus
     if(data.onPlanet === true)
       eggValueBonus = eggValueBonus.times(planetBoosts[0])
-<<<<<<< HEAD:JS/egghandler.js
-    eggValueBonus = eggValueBonus.times(milestoneBoosts[0])
-=======
     eggValueBonus = eggValueBonus.times(getActiveArtifactBoost(0))
     eggValueBonus = eggValueBonus.times(getActiveGemBoost(2))
     if(data.currentPlanetIndex === 18) {
@@ -208,7 +205,6 @@ function updateEggValueBonus() {
       eggValueBonus = eggValueBonus.times(knowleggBoost)
     }
       
->>>>>>> en-master:Scripts/egghandler.js
 }
 
 function updateIntHatch() {
